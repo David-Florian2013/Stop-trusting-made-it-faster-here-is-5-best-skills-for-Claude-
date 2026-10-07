@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  skill-clis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: CLI help (stdlib only)
+        run: |
+          python3 skills/perf-verifier/scripts/pf.py -h
+          python3 skills/code-verifier/scripts/vf.py -h
+          python3 skills/context-saver/scripts/cs.py -h
+      - name: Skill folders exist
+        run: |
+          for s in perf-verifier code-verifier context-saver repo-map prompt-clarifier; do
+            test -f "skills/$s/SKILL.md"
+          done
+      - name: Packaged zips have name/SKILL.md
+        run: |
+          python3 - << 'PY'
+          import zipfile, pathlib
+          for p in pathlib.Path("packaged").glob("*.skill"):
+              names = zipfile.ZipFile(p).namelist()
+              skill = p.stem
+              assert f"{skill}/SKILL.md" in names, (p, names)
+              assert "SKILL.md" not in names
+              assert f"{skill}/{skill}/SKILL.md" not in names
+          print("ok", list(pathlib.Path("packaged").glob("*.skill")))
+          PY

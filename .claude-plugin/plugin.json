@@ -1,0 +1,13 @@
+{
+  "name": "dont-trust-faster",
+  "version": "1.0.0",
+  "description": "Five Claude Code skills that make agents prove speedups, passing tests, and done instead of performing confidence.",
+  "author": {
+    "name": "David-Florian2013",
+    "url": "https://github.com/David-Florian2013"
+  },
+  "homepage": "https://github.com/David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-",
+  "repository": "https://github.com/David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-",
+  "license": "MIT",
+  "keywords": ["skills", "verification", "performance", "claude-code", "agent-skills"]
+}

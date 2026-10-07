@@ -1,0 +1,23 @@
+# Don't trust "I made it faster"
+
+Five Claude Code / Agent Skills that force local proof before an agent may say "faster", "tests pass", or "done".
+
+Repo: https://github.com/David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-
+
+## Install
+
+npx skills add David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-
+
+Claude Code:
+/plugin marketplace add David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-
+/plugin install dont-trust-faster@dont-trust-faster
+
+## Skills
+
+- skills/perf-verifier/SKILL.md — statistical before/after, profile, scale. scripts/pf.py
+- skills/code-verifier/SKILL.md — tests, imports, OWASP-ish scan, test-tamper. scripts/vf.py
+- skills/context-saver/SKILL.md — outline/peek/squeeze. scripts/cs.py
+- skills/repo-map/SKILL.md — writes .claude/MAP.md
+- skills/prompt-clarifier/SKILL.md — restates vague requests and waits
+
+Python 3 stdlib. Linux/macOS for perf-verifier. MIT.

@@ -1,0 +1,40 @@
+name: Skill request
+description: Ask for a gap in an existing skill, or a claim the agent should be forced to prove.
+title: "[Skill request]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Requests that already fit perf-verifier or code-verifier should be bugs or enhancements on those scripts. This repo is five skills; a sixth has to earn it.
+  - type: input
+    id: name
+    attributes:
+      label: Proposed skill or gap name
+      placeholder: "e.g. Windows RSS for pf.py, TS syntax check"
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: What claim should the agent be forced to prove?
+      placeholder: "e.g. 'bundle size went down' or 'the migration is reversible'"
+    validations:
+      required: true
+  - type: textarea
+    id: local
+    attributes:
+      label: How would it prove that locally, with no cloud API?
+    validations:
+      required: true
+  - type: dropdown
+    id: stack
+    attributes:
+      label: Stack it must support on day one
+      options:
+        - Python
+        - JavaScript / TypeScript
+        - Any command (like pf.py compare)
+        - Unsure
+    validations:
+      required: true

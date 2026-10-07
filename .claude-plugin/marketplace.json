@@ -1,0 +1,25 @@
+{
+  "name": "dont-trust-faster",
+  "owner": {
+    "name": "David-Florian2013",
+    "url": "https://github.com/David-Florian2013"
+  },
+  "metadata": {
+    "description": "Five Claude Code skills that make agents prove speedups, passing tests, and done."
+  },
+  "plugins": [
+    {
+      "name": "dont-trust-faster",
+      "source": "./",
+      "description": "perf-verifier, code-verifier, context-saver, repo-map, prompt-clarifier — receipts, not vibes.",
+      "strict": false,
+      "skills": [
+        "./skills/perf-verifier",
+        "./skills/code-verifier",
+        "./skills/context-saver",
+        "./skills/repo-map",
+        "./skills/prompt-clarifier"
+      ]
+    }
+  ]
+}

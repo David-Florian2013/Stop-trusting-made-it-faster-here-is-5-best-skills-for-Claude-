@@ -1,0 +1,62 @@
+name: Bug
+description: A skill or script did the wrong thing, crashed, or printed a bad verdict.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A bad verdict is a bug. Run the command on your machine and paste the receipt.
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      options:
+        - perf-verifier (pf.py)
+        - code-verifier (vf.py)
+        - context-saver (cs.py)
+        - repo-map
+        - prompt-clarifier
+        - install / README
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS and Python
+      placeholder: "macOS 15, Python 3.12.4"
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Exact command
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened (paste the receipt / traceback)
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal repro
+      description: A 10-line script or a public repo + commit beats "my private app".
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I ran this on my machine, not only in a chat log.
+          required: true
+        - label: I did not paste secrets.
+          required: true
