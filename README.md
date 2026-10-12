@@ -6,8 +6,6 @@ Five [Claude Code](https://code.claude.com) / [Agent Skills](https://agentskills
   <img src="docs/banner.jpg" alt="Stop trusting I made it faster — five Claude skills that make agents prove it" width="100%">
 </p>
 
-> Coding agents love claiming fake speedups. In a 30-run study cited by `perf-verifier`, only about **6%** of patches labelled "faster" were measurably faster. Independent testing cited by `code-verifier` found close to **half** of AI-written samples trip an OWASP Top-10 issue. This repo is the receipt.
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-)](https://github.com/David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-/releases)
 [![Python 3](https://img.shields.io/badge/python-3-3776ab)](https://www.python.org/)
@@ -65,10 +63,12 @@ Each skill is independently installable. Use the command, or grab the `.skill` z
 | **code-verifier** | `npx skills add David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude- --skill code-verifier` | [code-verifier.skill](https://github.com/David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-/releases/latest/download/code-verifier.skill) |
 | **context-saver** | `npx skills add David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude- --skill context-saver` | [context-saver.skill](https://github.com/David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-/releases/latest/download/context-saver.skill) |
 | **repo-map** | `npx skills add David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude- --skill repo-map` | [repo-map.skill](https://github.com/David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-/releases/latest/download/repo-map.skill) |
-| **prompt-clarifier** | `npx skills add David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude- --skill prompt-clarifier` | [prompt-clarifier.skill](https://github.com/David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-/releases/latest/download/prompt-clarifier.skill) |
+| **prompt-clarifier** | `npx skills add David-Florian2013/prompt-clarifier -g -a claude-code -y -s prompt-clarifier` | [prompt-clarifier.skill](https://github.com/David-Florian2013/prompt-clarifier/releases/latest/download/prompt-clarifier.skill) |
 | **all five** | `npx skills add David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-` | [all-skills.zip](https://github.com/David-Florian2013/Stop-trusting-made-it-faster-here-is-5-best-skills-for-Claude-/releases/latest/download/all-skills.zip) |
 
 Same files also live in [`packaged/`](packaged/) on `main`.
+
+**prompt-clarifier** has its own repo: [David-Florian2013/prompt-clarifier](https://github.com/David-Florian2013/prompt-clarifier). Install it from there. The copy in this bundle stays so "all five" still installs. The other four skills do not have their own repos yet, so this repository is still their source.
 
 ### Claude.ai (web / desktop)
 
